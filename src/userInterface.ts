@@ -6,11 +6,17 @@
 /**
  * 獲取用戶的全名
  * @param user - 用戶物件，應該包含 firstName 和 lastName 兩個屬性
- * 
+ *
  * 範例:
  * 輸入: { firstName: 'John', lastName: 'Doe' }
  * 輸出: 'John Doe'
  */
-export function getFullName(user: /* 你的用戶介面 */): string {
-    // 在此實現函式
+interface WholeName {
+  firstName: String,
+  lastName: String
+}
+export function getFullName(user: WholeName): string {
+  // 在此實現函式
+  const { firstName, lastName } = user;
+  return `${firstName} ${lastName}`
 }

@@ -8,5 +8,7 @@
  */
 
 export function printStudentInfo(student) {
-    // 在此實現函式
+  // 在此實現函式
+  const [name, score] = student;
+  return `${name}: ${score}%`
 }
