@@ -8,7 +8,12 @@
  * @returns - 回傳一個字串，表示格式化後的日期
  */
 export function formatDate(date: Date): string {
-    // 請在此處寫下你的程式碼
+  // 請在此處寫下你的程式碼
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1);
+  const day = String(date.getDate());
+
+  return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 }
 
 /**
@@ -21,5 +26,6 @@ export function formatDate(date: Date): string {
  * @returns - 回傳一個數字，表示四捨五入後的結果
  */
 export function roundNumber(num: number): number {
-    // 請在此處寫下你的程式碼
+  // 請在此處寫下你的程式碼
+  return Math.round(num);
 }

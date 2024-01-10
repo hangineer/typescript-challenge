@@ -6,4 +6,11 @@
  */
 
 // 請在下方寫下你的程式碼
-
+export async function fetchData(url :string): Promise<any> {
+  try {
+    const res = await fetch(url);
+    return await res.json();
+  } catch (err) {
+    throw err;
+  }
+}

@@ -7,13 +7,18 @@
 
 
 export function asyncSum(numbers: number[]): Promise<number> {
-    return new Promise((resolve, reject) => {
-        try {
-            // 請在此處寫下你的程式碼
-        } catch (error) {
-            reject(error);
-        }
-    });
+  return new Promise((resolve, reject) => {
+    try {
+      // 請在此處寫下你的程式碼
+      let sum: number = 0
+      for (let n = 0; n < numbers.length; n++) {
+        sum += numbers[n]
+      }
+      resolve(sum);
+    } catch (error) {
+      reject(error);
+    }
+  });
 }
 
 
