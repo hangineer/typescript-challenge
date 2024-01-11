@@ -8,7 +8,7 @@
  * 輸出: [[2, 4], [6, 8], [10, 12]]
  */
 
-export function processMultiArray(arr) {
+export function processMultiArray(arr: number[][]) {
   // 在此實現函式
   // 須考慮二維陣列的情況
   return arr.map(subArr => subArr.map(item => item * 2));
